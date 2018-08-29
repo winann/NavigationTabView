@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NavigationTabView_Example' do
+  pod 'NavigationTabView', :path => '../'
+
+  target 'NavigationTabView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
