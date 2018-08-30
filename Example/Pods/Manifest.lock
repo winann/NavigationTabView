@@ -1,0 +1,16 @@
+PODS:
+  - NavigationTabView (0.1.0)
+
+DEPENDENCIES:
+  - NavigationTabView (from `../`)
+
+EXTERNAL SOURCES:
+  NavigationTabView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NavigationTabView: 3efcce2eb7e202500ff4b0d94031ed36ab455976
+
+PODFILE CHECKSUM: a4ddc26fd53ef7c28418ebf5ab6211020a4e1842
+
+COCOAPODS: 1.5.3

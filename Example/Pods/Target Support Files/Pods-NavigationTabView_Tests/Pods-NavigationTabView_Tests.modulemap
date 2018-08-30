@@ -1,0 +1,6 @@
+framework module Pods_NavigationTabView_Tests {
+  umbrella header "Pods-NavigationTabView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

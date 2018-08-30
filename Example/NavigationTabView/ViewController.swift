@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import NavigationTabView
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, WillAddNavigationTab {
+    
+    var navigationTabView: NavigationTabView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navigationTabView = addNavigationTab(for: ["租房", "二手房"])
     }
 
     override func didReceiveMemoryWarning() {

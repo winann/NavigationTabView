@@ -1,0 +1,6 @@
+framework module NavigationTabView {
+  umbrella header "NavigationTabView-umbrella.h"
+
+  export *
+  module * { export * }
+}

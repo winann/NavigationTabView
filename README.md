@@ -22,7 +22,7 @@ pod 'NavigationTabView'
 
 ## Author
 
-winann, sya@mogoroom.com
+winann,winann@126.com
 
 ## License
 
