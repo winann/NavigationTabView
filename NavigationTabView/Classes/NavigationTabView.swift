@@ -30,7 +30,7 @@ public class NavigationTabView: UIView {
     /// 选择某个tab
     ///
     /// - Parameter index: 要选择 tab 的 Index
-    public func select(_ index: Int) {
+    public func select(for index: Int) {
         guard tabBtns.count > index else {
             return
         }
@@ -60,7 +60,7 @@ public class NavigationTabView: UIView {
         addSubview(bottomView)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) { [weak self] in
 //            self?.selectResult?(selectIndex)
-            self?.select(selectIndex)
+            self?.select(for: selectIndex)
         }
     }
     
@@ -75,7 +75,7 @@ public class NavigationTabView: UIView {
         }
         btn.setTitleColor(selectColor, for: .selected)
         btn.setTitleColor(deselectColor, for: .normal)
-//        btn.isSelected = select
+        btn.isSelected = select
         btn.addTarget(self, action: #selector(btnSelect), for: .touchUpInside)
         return btn
     }
