@@ -13,7 +13,7 @@ public class NavigationTabView: UIView {
     
     public var selectResult: ((Int) -> Void)?
     private var tabBtns: [UIButton] = []
-    private var lastSelectIndex: Int = 0
+    public private(set) var selectIndex: Int = 0
     private var bottomView = UIView(frame: CGRect.zero)
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,7 +53,7 @@ public class NavigationTabView: UIView {
             return btn
         }
         /// 布局状态条
-        guard lastSelectIndex < tabBtns.count else { return }
+        guard selectIndex < tabBtns.count else { return }
         bottomView.bounds.size = CGSize(width: 30, height: 2)
         bottomView.center = CGPoint(x: tabBtns[0].center.x, y: bounds.maxY - 1)
         bottomView.backgroundColor = UIColor(red: 82 / 255.0, green: 137 / 255.0, blue: 254 / 255.0, alpha: 1)
@@ -90,10 +90,10 @@ public class NavigationTabView: UIView {
         if !sender.isSelected {
             sender.isSelected = true
             bottomViewAnimation(to: sender)
-            if let lastSelectBtn = viewWithTag(1000 + lastSelectIndex) as? UIButton {
+            if let lastSelectBtn = viewWithTag(1000 + selectIndex) as? UIButton {
                 lastSelectBtn.isSelected = false
             }
-            lastSelectIndex = sender.tag - 1000
+            selectIndex = sender.tag - 1000
             selectResult?(sender.tag - 1000)
         }
     }
