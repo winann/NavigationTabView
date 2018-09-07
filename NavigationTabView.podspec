@@ -31,6 +31,7 @@ A tab view that use in NavitaionItem titleView
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'NavigationTabView/Classes/**/*'
+  s.swift_version = '4.0'
   
   # s.resource_bundles = {
   #   'NavigationTabView' => ['NavigationTabView/Assets/*.png']
